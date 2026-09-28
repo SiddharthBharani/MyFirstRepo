@@ -9,13 +9,13 @@ test.describe('suite 1', ()=>{
     
 test.beforeEach(async ({page}) =>{
     console.log("Inside Suite 1 Test1")
-await page.getByText('Forms').click();
+// await page.getByText('Forms').click();
 })
 
 test('@Tag1 first test', async({page}) =>{
     
     
-    await page.getByText('Form Layots').click()
+    // await page.getByText('Form Layots').click()
 })
 
 test('second test', async({page}) =>{

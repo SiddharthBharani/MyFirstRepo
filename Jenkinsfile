@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Setup Node') {
             steps {
                 sh '''
@@ -40,6 +34,12 @@ pipeline {
 
                     npx playwright test
                 '''
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'playwright-report/**/*', allowEmptyArchive: true
             }
         }
     }

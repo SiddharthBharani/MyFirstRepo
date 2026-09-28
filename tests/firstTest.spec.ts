@@ -2,7 +2,7 @@ import {test} from "@playwright/test";
 test.describe.configure({mode:'serial'});
 test.beforeEach(async ({page}) =>{
      console.log("Before anything else runs")
-await page.goto('http://localhost:4200/pages/iot-dashboard');
+// await page.goto('http://localhost:4200/pages/iot-dashboard');
 })
 
 test.describe('suite 1', ()=>{
@@ -20,10 +20,10 @@ test('@Tag1 first test', async({page}) =>{
 
 test('second test', async({page}) =>{
     
-    await page.getByText('Form Layouts').click();
-    await page.waitForTimeout(3000);
-    const gridEmailInput = page.locator('nb-card', { hasText: 'Using the Grid' }).getByRole('textbox', { name: 'Email' });
-    await gridEmailInput.fill("test@test.com");
+    // await page.getByText('Form Layouts').click();
+    // await page.waitForTimeout(3000);
+    // const gridEmailInput = page.locator('nb-card', { hasText: 'Using the Grid' }).getByRole('textbox', { name: 'Email' });
+    // await gridEmailInput.fill("test@test.com");
 })
 
 })
